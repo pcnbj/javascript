@@ -38,6 +38,7 @@ export function TourStep({
       onPointerDownOutside={(e) => e.preventDefault()}
       onInteractOutside={(e) => e.preventDefault()}
       {...props}
+      {...(step.props.align && { align: step.props.align })}
     >
       {dismissible && <Tooltip.Close onClick={handleDismiss} />}
 
